@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\ValueObjects\" />
+    <Folder Include="Domain\Repositories\" />
+    <Folder Include="Domain\Services\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StronglyTypedId" Version="0.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDD.Workshop.SharedKernel\DDD.Workshop.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>
