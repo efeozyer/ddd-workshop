@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Workshop.IdentityAccess", "src\DDD.Workshop.IdentityAccess\DDD.Workshop.IdentityAccess.csproj", "{45491705-935C-4A99-B168-F849F56E521C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Workshop.Account", "src\DDD.Workshop.Account\DDD.Workshop.Account.csproj", "{3BD1F762-B656-41DE-B568-330901387FFD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Workshop.Customer", "src\DDD.Workshop.Customer\DDD.Workshop.Customer.csproj", "{C49E2325-57AA-4BAB-AEF0-213996CD6818}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Workshop.Card", "src\DDD.Workshop.Card\DDD.Workshop.Card.csproj", "{3A1D132E-1371-49A1-A45A-C3CF7D0FB6D5}"
@@ -16,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Workshop.SharedKernel", "src\DDD.Workshop.SharedKernel\DDD.Workshop.SharedKernel.csproj", "{7F6839DB-F5E2-4DAC-B1DF-15D5D855BE4C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Workshop.Platform", "src\DDD.Workshop.Platform\DDD.Workshop.Platform.csproj", "{76B3D75D-8EB7-4EAC-A668-0E3C06B72072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Workshop.CashAccount", "src\DDD.Workshop.CashAccount\DDD.Workshop.CashAccount.csproj", "{CD430615-B03B-47EE-B357-412B5458059F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,6 @@ Global
 		{45491705-935C-4A99-B168-F849F56E521C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45491705-935C-4A99-B168-F849F56E521C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45491705-935C-4A99-B168-F849F56E521C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BD1F762-B656-41DE-B568-330901387FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BD1F762-B656-41DE-B568-330901387FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BD1F762-B656-41DE-B568-330901387FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BD1F762-B656-41DE-B568-330901387FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C49E2325-57AA-4BAB-AEF0-213996CD6818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C49E2325-57AA-4BAB-AEF0-213996CD6818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C49E2325-57AA-4BAB-AEF0-213996CD6818}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{76B3D75D-8EB7-4EAC-A668-0E3C06B72072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B3D75D-8EB7-4EAC-A668-0E3C06B72072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B3D75D-8EB7-4EAC-A668-0E3C06B72072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD430615-B03B-47EE-B357-412B5458059F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD430615-B03B-47EE-B357-412B5458059F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD430615-B03B-47EE-B357-412B5458059F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD430615-B03B-47EE-B357-412B5458059F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
