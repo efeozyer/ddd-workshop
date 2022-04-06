@@ -1,6 +1,8 @@
+using DDD.Workshop.IdentityAccess.ACL.AspNetIdentity.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +30,12 @@ namespace DDD.Workshop.Api
         {
 
             services.AddControllers();
+
+            services.AddIdentity<ApplicationUser, IdentityRole>();
+
+            services.AddAuthentication()
+                .AddJwtBearer();      
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DDD.Workshop.Api", Version = "v1" });
