@@ -3,7 +3,9 @@ using DDD.Workshop.SharedKernel;
 using DDD.Workshop.SharedKernel.ValueObjects;
 using DDD.Workshop.SharedKernel.Helpers;
 using DDD.Workshop.IdentityAccess.Domain.Event;
+using DDD.Workshop.IdentityAccess.Domain.Events;
 using DDD.Workshop.SharedKernel.Constants;
+using DDD.Workshop.SharedKernel.Enums;
 
 namespace DDD.Workshop.IdentityAccess.Domain.Entities
 {
@@ -14,20 +16,23 @@ namespace DDD.Workshop.IdentityAccess.Domain.Entities
         public string PhoneNumber { get; private set; }
 
         public string PasswordHash { get; private set; }
+        
+        public IdentityUserStatus Status { get; private set; }
+        
+        public DateTime VerifiedOn { get; private set; }
 
         private IdentityUser()
         {
         }
 
-        public IdentityUser(string emailAddress, string phoneNumber, DateTime dateOfBirth, string passwordHash)
+        public IdentityUser(string emailAddress, string phoneNumber, string passwordHash)
         {
-            
-            if (DateTimeHelper.CalculateAge(dateOfBirth) < RuleConstants.MIN_USER_AGE)
-                throw new InvalidOperationException(ErrorConstants.INVALID_USER_AGE);
-            
+            Id = UserId.New();
             EmailAddress = emailAddress;
             PhoneNumber = phoneNumber;
             PasswordHash = passwordHash;
+            
+            Events.Add(new IdentityUserCreated(Id, emailAddress));
         }
 
         public void ChangeEmailAddress(string emailAddress)
@@ -49,6 +54,15 @@ namespace DDD.Workshop.IdentityAccess.Domain.Entities
             PasswordHash = passwordHash;
 
             Events.Add(new UserPasswordChanged(Id));
+        }
+
+        public void Verify()
+        {
+            Status = IdentityUserStatus.Verified;
+            
+            VerifiedOn = DateTimeHelper.Now();
+            
+            Events.Add(new UserVerified(Id, VerifiedOn));
         }
     }
 }

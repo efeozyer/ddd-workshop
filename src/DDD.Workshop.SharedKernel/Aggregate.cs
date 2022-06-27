@@ -10,6 +10,8 @@ namespace DDD.Workshop.SharedKernel
 
         protected List<object> Events { get; init; }
 
+        public IReadOnlyCollection<object> DomainEvents => Events;
+
         public Aggregate()
         {
             Events = new List<object>();

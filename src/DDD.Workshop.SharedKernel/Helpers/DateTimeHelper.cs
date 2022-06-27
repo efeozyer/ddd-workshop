@@ -10,5 +10,10 @@ namespace DDD.Workshop.SharedKernel.Helpers
 
             return (int)((now - dateOfBirh).TotalDays / 365.242199);
         }
+
+        public static DateTime Now()
+        {
+            return DateTime.UtcNow;
+        }
     }
 }
